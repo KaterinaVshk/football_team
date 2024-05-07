@@ -1,0 +1,27 @@
+require:
+  - rubocop-rails
+  - rubocop-rspec
+
+AllCops:
+  EnabledByDefault: true
+  SuggestExtensions: false
+  TargetRubyVersion: 3.0.2
+  Exclude:
+    - 'config/**/*'
+    - 'bin/**/*'
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+Bundler/GemComment:
+  Enabled: false
+Bundler/GemVersion:
+  Enabled: false
+Style/Documentation:
+  Enabled: false
+Lint/ConstantResolution:
+  Enabled: false
+Style/Copyright:
+  Enabled: false
+
+Layout/LineLength:
+  Max: 120
