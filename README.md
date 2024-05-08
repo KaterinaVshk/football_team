@@ -10,12 +10,12 @@
 
 * Run tests: rspec
 
-Example of usage:
+**Example of usage:
 
-PerfomanceService.assign_indicator_to_player(indicator_id: 1, player_id: 7, match_id: 1)
+`PerfomanceService.assign_indicator_to_player(indicator_id: 1, player_id: 7, match_id: 1)`
 
-PerfomanceService.check_indicator_for_several_matches(indicator_id: 1, player_id: 7, matches_number: 5)
+`PerfomanceService.check_indicator_for_several_matches(indicator_id: 1, player_id: 7, matches_number: 5)`
 
-PerfomanceService.top_5_by_indicator_in_team(team_id: 1, indicator_id: 1)
+`PerfomanceService.top_5_by_indicator_in_team(team_id: 1, indicator_id: 1)`
 
-PerfomanceService.top_5_players
+`PerfomanceService.top_5_players`
