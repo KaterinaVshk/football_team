@@ -10,7 +10,7 @@
 
 * Run tests: rspec
 
-**Example of usage:
+**Example of usage:**
 
 `PerfomanceService.assign_indicator_to_player(indicator_id: 1, player_id: 7, match_id: 1)`
 
