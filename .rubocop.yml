@@ -9,6 +9,8 @@ AllCops:
   Exclude:
     - 'config/**/*'
     - 'bin/**/*'
+    - 'db/**/*'
+    - 'spec/**/*'
 
 Style/FrozenStringLiteralComment:
   Enabled: false
@@ -22,6 +24,21 @@ Lint/ConstantResolution:
   Enabled: false
 Style/Copyright:
   Enabled: false
+Style/MethodCallWithArgsParentheses:
+  Enabled: false
+Style/DocumentationMethod:
+  Enabled: false
+Rails/SchemaComment:
+  Enabled: false
+
 
 Layout/LineLength:
   Max: 120
+Metrics/MethodLength:
+  Max: 40
+Metrics/BlockLength:
+  Max: 50
+RSpec/ExampleLength:
+  Max: 15
+RSpec/MultipleExpectations:
+  Max: 3
