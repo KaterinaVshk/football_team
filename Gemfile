@@ -16,6 +16,7 @@ group :development, :test do
   gem 'database_cleaner'
   gem 'dotenv-rails'
   gem 'factory_bot_rails'
+  gem 'faker', '~> 3.3', '>= 3.3.1'
   gem 'rspec'
   gem 'rspec-rails', '~> 4.0.0'
   gem 'rubocop-rails', require: false

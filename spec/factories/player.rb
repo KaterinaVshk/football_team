@@ -1,8 +1,8 @@
 FactoryBot.define do
   factory :player do
-    name { 'Lamine' }
-    surname { 'Yamal' }
-    player_number { 27 }
+    name { Faker::Name.first_name }
+    surname { Faker::Name.last_name }
+    player_number {  Random.rand(100000) }
 
     association :team, factory: :team
   end

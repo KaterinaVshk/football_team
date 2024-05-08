@@ -1,24 +1,21 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* Ruby version - 3.0.2
 
-Things you may want to cover:
+* Creating database: rails db:create
 
-* Ruby version
+* Migrating database: rails db:migrate
 
-* System dependencies
+* Create seeds: rails db:seed
 
-* Configuration
+* Run tests: rspec
 
-* Database creation
+Example of usage:
 
-* Database initialization
+PerfomanceService.assign_indicator_to_player(indicator_id: 1, player_id: 7, match_id: 1)
 
-* How to run the test suite
+PerfomanceService.check_indicator_for_several_matches(indicator_id: 1, player_id: 7, matches_number: 5)
 
-* Services (job queues, cache servers, search engines, etc.)
+PerfomanceService.top_5_by_indicator_in_team(team_id: 1, indicator_id: 1)
 
-* Deployment instructions
-
-* ...
+PerfomanceService.top_5_players

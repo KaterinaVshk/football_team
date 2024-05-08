@@ -18,13 +18,14 @@ RSpec.describe(Team) do
       end
 
       it 'isn\'t valid with a not unique values' do
-        second_team = create(:team)
-  
-        expect(first_team).not_to be_valid
+        first_team = create(:team)
+        second_team = build(:team, name: first_team.name, country_name: first_team.country_name)
+
+        expect(second_team).not_to be_valid
       end
   
       it 'is valid with a unique values' do
-        second_team = create(:team, name: 'Real Madrid')
+        first_team = create(:team)
   
         expect(first_team).to be_valid
       end

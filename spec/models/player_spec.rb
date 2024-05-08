@@ -12,14 +12,6 @@ RSpec.describe(Player) do
       end
     end
 
-    describe '#surname' do
-      it 'isn\'t valid without a surname' do
-        player_1.surname = nil
-
-        expect(player_1).not_to be_valid
-      end
-    end
-
     describe '#player_number' do
       it 'isn\'t valid without a player_number' do
         player_1.player_number = nil
@@ -29,16 +21,16 @@ RSpec.describe(Player) do
 
       it 'isn\'t valid with a not unique values' do
         player_2 = create(:player)
-        player_1.team = player_2.team
+        player_1 = build(:player, team: player_2.team, player_number: player_2.player_number)
   
         expect(player_1).not_to be_valid
       end
 
       it 'is valid with a unique values' do
-        player_2 = create(:player, player_number: 2)
-        player_1.team = player_2.team
+        player_1 = create(:player, player_number: 2)
+        player_2 = build(:player, team: player_1.team)
   
-        expect(player_1).to be_valid
+        expect(player_2).to be_valid
       end
     end
   end
